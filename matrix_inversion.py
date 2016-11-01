@@ -7,9 +7,17 @@
 
 
 def invert_2x2(a, b, c, d):
-    # DUMMY IMPLEMENTATION
-    e = a
-    f = b
-    g = c
-    h = d
+    det = (a*d - b*c)
+    if det != 0:
+        e = d/det
+        f = -b/det
+        g = -c/det
+        h = a/det
+    else:
+        e = a
+        f = b
+        g = c
+        h = d
+        print("Non-invertible matrix.")
+
     return e, f, g, h
