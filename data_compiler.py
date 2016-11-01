@@ -19,9 +19,9 @@ def compile_data(stopping_voltages, photocurrents):
             i_sum_2 += current * current
             i_count += 1
             compiled_data[voltage] = i_sum, i_sum_2, i_count
-
         else:
             compiled_data[voltage] = current, current * current, 1
+        counter += 1
 
     # These need to be compiled into a single dictionary whose keys are the x values and whose values are
     # tuples containing the sum of y values, the sum of the squares of the y values, and their count.
